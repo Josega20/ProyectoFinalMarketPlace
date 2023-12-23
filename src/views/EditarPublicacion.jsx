@@ -26,7 +26,7 @@ function EditarPublicacion() {
 
     const eliminarPublicacion = async () =>{
         try {
-            const urlServer = 'https://todomercado.netlify.app';
+            const urlServer = 'https://todomercado.onrender.com';
             const endpoint = `/mispublicaciones/${id}`;
 
             // Realiza la solicitud al backend para eliminar una publicación
@@ -69,8 +69,8 @@ function EditarPublicacion() {
                     nombre_producto,
                     descripcion,
                     precio,
-                    id,
                     url,
+                    id,
                 });
 
                 navigate('/misPublicaciones');
