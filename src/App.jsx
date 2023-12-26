@@ -25,7 +25,7 @@ function App() {
   const [esFavoritos, setEsFavoritos] = useState([]);
   const [productosBuscados, setProductosBuscados] = useState([]);
   const [productosBase, setProductosBase] = useState([]);
-  const [token, setToken] = useState([]);
+  const [tokeN, setToken] = useState();
 
 
 
@@ -39,7 +39,7 @@ function App() {
           esFavoritos, setEsFavoritos,
           productosBuscados, setProductosBuscados,
           productosBase, setProductosBase,
-          token, setToken
+          tokeN, setToken
         }}>
         <BrowserRouter>
           <Routes>

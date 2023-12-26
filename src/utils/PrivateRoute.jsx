@@ -6,9 +6,9 @@ import React from 'react'
 const PrivateRoute = () => {
 
   const usuarioContext = useContext(Context);
-  const { token, setToken } = usuarioContext;
+  const { tokeN } = usuarioContext;
 
-  return token ? <Outlet /> : Navigate("/") ;
+  return tokeN ? <Outlet /> : <Navigate to="/" /> ;
 };
 
 export default PrivateRoute;
