@@ -41,7 +41,7 @@ function App() {
           productosBase, setProductosBase,
           tokeN, setToken
         }}>
-        <HashRouter>
+        <BrowserRouter>
           <Routes>
             <Route path="*" element={<Navigate to="/" />} />
             <Route path="/" element={<Inicio />} />
@@ -57,7 +57,7 @@ function App() {
               <Route path="/favoritos" element={<Favoritos />} />
             </Route>
           </Routes>
-        </HashRouter>
+        </BrowserRouter>
       </MyContext.Provider >
     </>
   );
