@@ -52,7 +52,7 @@ function NavaDesk() {
       linkComponent = (
         <>
           <Nav.Link className='link' onClick={loginClick} >Login</Nav.Link>
-          <Nav.Link className='link' onClick={registroClick} >Registrase</Nav.Link>
+          <Nav.Link className='link' onClick={registroClick} >Registro</Nav.Link>
           <Nav.Link className='link' onClick={() => { setModalShow(true) }}>Buscar</Nav.Link>
         </>
       );
@@ -61,7 +61,7 @@ function NavaDesk() {
       linkComponent = (
         <>
           <Nav.Link className='link' onClick={inicioClick} >Inicio</Nav.Link>
-          <Nav.Link className='link' onClick={registroClick} >Registrase</Nav.Link>
+          <Nav.Link className='link' onClick={registroClick} >Registro</Nav.Link>
         </>
       );
       break;
