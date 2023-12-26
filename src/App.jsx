@@ -9,7 +9,7 @@ import Publicaciones from "./views/Publicaciones";
 import MyContext from "./Context/MyContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, HashRouter } from "react-router-dom";
 import { useState } from "react";
 import MisPublicaciones from "./views/MisPublicaciones";
 import PrivateRoute from "./utils/PrivateRoute";
@@ -41,7 +41,7 @@ function App() {
           productosBase, setProductosBase,
           tokeN, setToken
         }}>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path="*" element={<Navigate to="/" />} />
             <Route path="/" element={<Inicio />} />
@@ -57,7 +57,7 @@ function App() {
               <Route path="/favoritos" element={<Favoritos />} />
             </Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </MyContext.Provider >
     </>
   );
