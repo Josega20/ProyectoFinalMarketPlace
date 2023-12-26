@@ -9,7 +9,7 @@ import Publicaciones from "./views/Publicaciones";
 import MyContext from "./Context/MyContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import MisPublicaciones from "./views/MisPublicaciones";
 import PrivateRoute from "./utils/PrivateRoute";
@@ -43,6 +43,7 @@ function App() {
         }}>
         <BrowserRouter>
           <Routes>
+            <Route path="*" element={<Navigate to="/" />} />
             <Route path="/" element={<Inicio />} />
             <Route path="/login" element={<Login />} />
             <Route path="/registro" element={<Registro />} />
@@ -56,8 +57,8 @@ function App() {
               <Route path="/favoritos" element={<Favoritos />} />
             </Route>
           </Routes>
-      </BrowserRouter>
-    </MyContext.Provider >
+        </BrowserRouter>
+      </MyContext.Provider >
     </>
   );
 }
